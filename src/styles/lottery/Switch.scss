@@ -1,0 +1,37 @@
+#allhistory{
+    position: absolute;
+     background-color: rgb(190, 134, 239);
+     color: rgb(39, 31, 46);
+     border: 0px;
+     border-radius: 20px;
+     height: 33px;
+     width: 115px;
+     z-index: 2;
+  }
+  #yourhistory{
+     position: relative;
+     background-color: var(--colors-white);
+     color: rgb(190, 134, 239);
+     border: 0px;
+     border-radius: 20px;
+     height: 33px;
+     width: 230px;
+     z-index: 1;
+     text-align: right;
+     padding-right: 20px;
+  }
+ 
+ .clicked{
+   background-color: #7a6eaa;
+   color: #eeeaf4;
+   width: 115px;
+   border-radius: 15px;
+   z-index: 2;
+ }
+ .unclicked{
+   background-color: #eeeaf4;
+   color: #7a6eaa;
+   width: 230px;
+   border-radius: 15px;
+   z-index: 1;
+ }

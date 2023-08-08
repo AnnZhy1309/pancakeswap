@@ -1,0 +1,664 @@
+:root{
+    --purple: rgb(103, 13, 182);
+    --purple2: #452a7a;
+    --blue: #1fc7d4;
+    --yellow: rgb(255, 223, 40) ;
+    --darkgrey: #191326;
+    --lightgrey: rgb(58, 58, 58);
+    --purplenumber: #7a6eaa;
+    --white: #fff;
+    --lightestgrey: #e9eaeb;
+    --bg-white: #faf9fa;
+    --dark-text:#280d5f;
+    --light-text: #7a6eaa;
+    --bright-text:#7645d9;
+    --disabled: #e9eaeb;
+    --pink: #ed4b9e;
+    --colors-input: #eeeaf4;
+    --colors-inputSecondary: #d7caec; 
+    --colors-background: #faf9fa;
+  
+      --colors-white: #fff;
+      --colors-failure: #ed4b9e;
+      --colors-failure33: #ed4b9e33;
+      --colors-primary: #1fc7d4;
+      --colors-primary0f: #1fc7d40f;
+      --colors-primary3D: #1fc7d43d;
+      --colors-primaryBright: #53dee9;
+      --colors-primaryDark: #0098a1;
+      --colors-success: #31d0aa;
+      --colors-success19: #31d0aa19;
+      --colors-warning: #ffb237;
+      --colors-warning2D: #ed4b9e2d;
+      --colors-warning33: #ed4b9e33;
+      --colors-binance: #f0b90b;
+      --colors-overlay: #452a7a;
+      --colors-gold: #ffc700;
+      --colors-silver: #b2b2b2;
+      --colors-bronze: #e7974d;
+      --colors-secondary: #9a6aff;
+      --colors-secondary80: #9a6aff80;
+      --colors-background: #08060b;
+      --colors-backgroundDisabled: #3c3742;
+      --colors-backgroundAlt: #27262c;
+      --colors-backgroundAlt2: rgba(39,38,44,.7);
+      --colors-cardBorder: #383241;
+      --colors-contrast: #fff;
+      --colors-dropdown: #1e1d20;
+      --colors-dropdownDeep: #100c18;
+      --colors-invertedContrast: #191326;
+      --colors-input: #372f47;
+      --colors-inputSecondary: #262130;
+      --colors-tertiary: #353547;
+      --colors-text: #f4eeff;
+      --colors-text99: #f4eeff99;
+      --colors-textDisabled: #666171;
+      --colors-textSubtle: #b8add2;
+      --colors-disabled: #524b63;
+      --colors-gradientBubblegum: linear-gradient(139.73deg,#313d5c,#3d2a54);
+      --colors-gradientInverseBubblegum: linear-gradient(139.73deg,#3d2a54,#313d5c);
+      --colors-gradientCardHeader: linear-gradient(166.77deg,#3b4155,#3a3045);
+      --colors-gradientBlue: linear-gradient(180deg,#00707f,#19778c);
+      --colors-gradientViolet: linear-gradient(180deg,#6c4999,#6d4db2);
+      --colors-gradientVioletAlt: linear-gradient(180deg,#434575,#66578d);
+      --colors-gradientGold: linear-gradient(180deg,#ffd800,#fdab32);
+      --colors-gradientBold: linear-gradient(#53dee9,#9a6aff);
+  }
+  
+  
+  hr{
+    width:1px;
+  }
+  
+  
+  .active-button{
+    position: relative;
+    -webkit-box-align: center;
+    align-items: center;
+    border: 0px;
+    border-radius: 16px;
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    -webkit-box-pack: center;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: 32px;
+    padding: 0px 16px;
+    background-color: var(--colors-textSubtle);
+    color: var(--colors-backgroundAlt);
+  }
+  
+  .inactive-button{
+    
+    background-color: transparent;
+    color: var(--colors-textSubtle);
+    position: relative;
+    -webkit-box-align: center;
+    align-items: center;
+    border: 0px;
+    border-radius: 16px;
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    -webkit-box-pack: center;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: 32px;
+    padding: 0px 16px;
+  }
+  
+  
+  
+  
+  #allhistorytable, #yourhistorytables{
+    background-color: var(--colors-backgroundAlt);
+     width: 750px;
+     height: auto;
+     border-radius: 25px;
+     border: 0px;
+     border-bottom: 2px solid var(--colors-backgroundAlt2);
+     margin: 30px;
+  }
+     #tabletop, #yourtabletop{
+        display: flex;
+        flex-direction: row;
+        align-content: space-between ;
+        width: 100%;
+        border: 0px;
+        border-bottom: 0.5px solid var(--colors-cardBorder);
+        background-color: var(--colors-gradientCardHeader);
+     }
+            #tabletoplineleft{
+             padding: 10px
+            }
+         #tabletopline{
+           display: flex;
+         }
+     #tablecenter{
+        display: flex;
+        height: 110px;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        border: 0px;
+        border-bottom: 0.5px solid var(--colors-cardBorder);
+     }
+     .ballnumber{
+        width: 100px;
+        height: 100px;
+     }
+     #tabletop{
+        display: flex;
+        justify-content: space-between;
+     }
+          #tabletopline{
+           margin-left: 15px;
+         }
+         #round{
+           font-size: 100%;
+           color: var(--colors-text);
+           margin-top: 18px;
+         }
+          #round-id{
+           text-align: center;
+           font-style: bold;
+           width: 55px;
+           height: 30px;
+           background: var(--colors-input);
+           color: var(--colors-text);
+           border: 0.5px solid var(--colors-inputSecondary);
+           border-radius: 20px;
+           font-size: 100%;
+           margin: 15px;
+          }
+          #tabletopline2{
+           font-size: small;
+           font-style: bold;
+           margin-left: 15px;
+           color: var(--colors-text);
+          }
+          #tabletoplineright{
+           margin: 30px 80px;
+         
+          }
+             .arrow{
+              background-color: none;
+              border: 0px;
+              background-color: var(--colors-backgroundAlt);
+             }
+  
+       #tablecentercontentline1{
+           display: flex;
+         }   
+           #winningnumbers{
+             margin: 20px;
+             font-size: 100%;
+             color: var(--colors-text)
+           }
+  
+        #ballswithnumbers{
+           display: flex;
+           flex-direction: row;
+           width: 100px;
+           gap:5px;
+           margin-left: 70px;
+           margin-top: 20px;
+        }
+            .ballnumber{
+              width: 70px;
+              height: 70px;
+            }
+            .sc-daa4d312-0{
+                color: black;
+                text-shadow: white -0.75px -0.75px 0px, white 0.75px -0.75px 0px, white -0.75px 0.75px 0px, white 0.75px 0.75px 0px;
+            }
+           
+         
+                 #div4prizepot{   
+                   background-color: var(--colors-background);
+                   width: 750px;
+                   height: auto;
+                   border-top: 1px solid var(--colors-inputSecondary);
+                   border-bottom: 2px solid var(--colors-inputSecondary);
+                   display: grid;
+                   grid-template-columns: 130px 130px 130px 130px;
+                   grid-template-rows: 140px 140px;
+                   gap: 5px;
+                 }
+                 #prizepot1{
+                   grid-column-start: 0;
+                   grid-column-end: 1;
+                   grid-row-start: 0;
+                   grid-row-end: 2;
+                   display: flex;
+                   flex-direction: column;
+                   text-align: start;
+                   padding-left: 20px;
+                  }
+                  #prizepot2{
+                   grid-column-start: 0;
+                   grid-column-end: 1;
+                   grid-row-start: 2;
+                   grid-row-end: 3;
+                  }
+                  #prizepot3{
+                   grid-column-start: 1;
+                   grid-column-end: 5;
+                   grid-row-start: 0;
+                   grid-row-end: 1;
+                  }
+                  #prizepot2, #prizepot3 {
+                     color: var(--colors-text);
+                     padding: 20px;
+                     text-align: left;
+                     font-size: 14px;
+                   }
+                
+                  #match1{
+                   grid-column-start: 1;
+                   grid-column-end: 2;
+                   grid-row-start: 1;
+                   grid-row-end: 2;
+                  }
+                  #match2{
+                   grid-column-start: 2;
+                   grid-column-end: 3;
+                   grid-row-start: 1;
+                   grid-row-end: 2;
+                  }
+                  #match3{
+                   grid-column-start: 3;
+                   grid-column-end: 4;
+                   grid-row-start: 1;
+                   grid-row-end: 2;
+                  }
+                  #match4{
+                   grid-column-start: 4;
+                   grid-column-end: 5;
+                   grid-row-start: 1;
+                   grid-row-end: 2;
+                  }
+                  #match5{
+                   grid-column-start: 1;
+                   grid-column-end: 2;
+                   grid-row-start: 2;
+                   grid-row-end: 3;
+                  }
+                  #match6{
+                   grid-column-start: 2;
+                   grid-column-end: 3;
+                   grid-row-start: 2;
+                   grid-row-end: 3;
+                  }
+                  #match7{
+                   grid-column-start: 3;
+                   grid-column-end: 4;
+                   grid-row-start: 2;
+                   grid-row-end: 3;
+                  }
+                  #match7 h3{
+                   color: var(--colors-failure);
+                  }
+                   .match h2 {
+                     color: var(--colors-text);
+                     margin:0px;
+                     text-align: left;
+                     font-size: 20px;
+                     display: flex;
+                   }
+                   .match h3{
+                     color: var(--colors-secondary);
+                     font-size: 18px;
+                     text-align: left;
+                     display: flex;
+                   }
+                   .match p{
+                     color: var(--colors-textSubtle);
+                     font-size: 12px;
+                     text-align: left;
+                     display: flex;
+                     font-size: small;
+                   }
+                   #prizepot1 h2{
+                     color: var(--colors-secondary);;
+                     font-size: 35px;
+                   }               
+                   #prizepot1 h4{
+                     color: var(--colors-text);
+                     margin:0px;
+                     padding-right: 0px;
+                   }
+                   #prizepot1 p{
+                     color: var(--colors-textSubtle);
+                     font-size: 15px;
+                     font-size: small;
+                   }
+         
+               
+               
+            @media screen and (max-width: 839px){
+               #allhistorytable{
+                  width: 90vw;
+               }
+               #tablecentercontentline1{
+                 flex-direction: column;
+                 justify-content: center;
+                 align-content: center;
+                 align-items: center;
+                 align-self: center;
+                text-align: center;
+               }
+               #tablecentercontent{
+                 justify-content: center;
+                 align-content: center;
+                 align-items: center;
+                 align-self: center;
+                text-align: center;
+               }
+               .ballnumber{
+                  width: 40px;
+                  height: 40px;
+               }
+               #ballswithnumbers{
+                  margin: 0px;
+               }
+               #winningnumbers{
+                  margin: 10px;
+               }
+            }
+         
+         #yourhistorytable{
+           display: none;
+         }
+         
+            #rounds{
+             font-size: 100%;
+             color: var(--colors-text);
+             margin: 23px;
+           }
+             #yourtablecenter{
+             display: flex;
+             width: 100%;
+             flex-direction: row;
+             justify-content: space-between;
+             border: 0px;
+             border-bottom: 1px solid var(--colors-cardBorder);
+             display: flex;
+             justify-content: center;
+           }
+              #yourtablecentercontent{
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               padding: 35px;
+              }
+                #yourtablecentercontent p{
+                 color: var(--colors-textSubtle);
+                }
+        .tablebottom{
+          min-height: 50px;
+          color: var(--colors-textSubtle);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+  
+        
+     #allhistorytable, #yourhistorytables{
+      width: 750px;
+      height: 300px;
+      border-radius: 25px;
+      border: 0px;
+      border-bottom: 2px solid var(--colors-backgroundDisabled);
+   }
+      #tabletop, #yourtabletop{
+         display: flex;
+         flex-direction: row;
+         align-content: space-between ;
+         width: 100%;
+         border: 0px;
+         border-bottom: 1px solid var(--colors-backgroundDisabled);
+      }
+             #tabletoplineleft{
+              padding: 10px
+             }
+          #tabletopline{
+            display: flex;
+            flex-direction: row;
+          }
+      #tablecenter{
+         display: flex;
+         height: 110px;
+         width: 100%;
+         flex-direction: row;
+         justify-content: space-between;
+         border: 0px;
+         border-bottom: 1px solid var(--colors-backgroundDisabled);
+      }
+      .ballnumber{
+         width: 100px;
+         height: 100px;
+      }
+      #tabletop{
+         display: flex;
+         justify-content: space-between;
+      }
+           #tabletopline{
+            margin-left: 15px;
+          }
+          #round{
+            font-size: 100%;
+            color: var(--colors-text);
+            margin-top: 18px;
+          }
+           #round-id{
+            text-align: center;
+            font-style: bold;
+            width: 55px;
+            height: 30px;
+            background: var(--colors-input);
+            color: var(--colors-text);
+            border: 0.5px solid var(--colors-inputSecondary);
+            border-radius: 20px;
+            font-size: 100%;
+            margin: 15px;
+           }
+           #tabletopline2{
+            font-size: small;
+            font-style: bold;
+            margin-left: 15px;
+            color: var(--colors-text);
+           }
+           #tabletoplineright{
+            margin: 30px 80px;
+          
+           }
+              .arrow{
+               background-color: none;
+               border: 0px;
+               background-color: var(--colors-white);
+              }
+  
+   
+         #ballswithnumbers{
+            display: flex;
+            flex-direction: row;
+            width: 100px;
+            gap:5px;
+            margin-left: 70px;
+            margin-top: 20px;
+         }
+             .ballnumber{
+               width: 70px;
+               height: 70px;
+             }
+             .sc-daa4d312-0{
+                 color: black;
+                 text-shadow: white -0.75px -0.75px 0px, white 0.75px -0.75px 0px, white -0.75px 0.75px 0px, white 0.75px 0.75px 0px;
+             }
+  
+        #div4prizepot{   
+          background-color: var(--colors-background);
+          width: 750px;
+          height: auto;
+          border-bottom-left-radius: 25px;
+          border-bottom-right-radius: 25px;
+          border-top: 1px solid var(--colors-inputSecondary);
+          border-bottom: 2px solid var(--colors-inputSecondary);
+          display: grid;
+          grid-template-columns: 130px 130px 130px 130px;
+          grid-template-rows: 140px 140px;
+          gap: 5px;
+        }
+        #prizepot1{
+          grid-column-start: 0;
+          grid-column-end: 1;
+          grid-row-start: 0;
+          grid-row-end: 2;
+         }
+         #prizepot2{
+          grid-column-start: 0;
+          grid-column-end: 1;
+          grid-row-start: 2;
+          grid-row-end: 3;
+         }
+         #prizepot3{
+          grid-column-start: 1;
+          grid-column-end: 5;
+          grid-row-start: 0;
+          grid-row-end: 1;
+         }
+         #match1{
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 1;
+          grid-row-end: 2;
+         }
+         #match2{
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 2;
+         }
+         #match3{
+          grid-column-start: 3;
+          grid-column-end: 4;
+          grid-row-start: 1;
+          grid-row-end: 2;
+         }
+         #match4{
+          grid-column-start: 4;
+          grid-column-end: 5;
+          grid-row-start: 1;
+          grid-row-end: 2;
+         }
+         #match5{
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 2;
+          grid-row-end: 3;
+         }
+         #match6{
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 2;
+          grid-row-end: 3;
+         }
+         #match7{
+          grid-column-start: 3;
+          grid-column-end: 4;
+          grid-row-start: 2;
+          grid-row-end: 3;
+         }
+         #match7 h3{
+          color: var(--colors-failure)
+         }
+          .match{
+            padding-bottom: 20px;
+          }
+          .match h3{
+            color: var(--colors-secondary);
+            font-size: 18px;
+            text-align: left;
+            display: flex;
+          }
+          #prizepot1 h1{
+            color: var(--colors-secondary);
+          }
+          .match h2 {
+            color: var(--colors-text);
+            margin:0px;
+            text-align: left;
+            font-size: 20px;
+            display: flex;
+          }
+          #prizepot1 h4{
+            color: var(--colors-text);
+            margin:0px;
+            padding-right: 0px;
+          }
+          .match p{
+  
+            font-size: 12px;
+            text-align: left;
+            display: flex;
+          }
+          #prizepot1 p{
+            color: var(----colors-primary0f);
+            font-size: 15px;
+          }
+          #prizepot1 h2{
+            color: var(--colors-secondary);;
+            font-size: 35px;
+          }
+  
+        #prizepot2, #prizepot3 {
+          color: var(--colors-secondary);
+          padding: 15px;
+          text-align: left;
+        }
+     
+      
+   @media screen and (max-width: 839px){
+      #allhistorytable{
+         width: 90vw;
+      }
+      #tablecentercontent{
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        align-self: center;
+       text-align: center;
+      }
+      .ballnumber{
+         width: 40px;
+         height: 40px;
+      }
+      #ballswithnumbers{
+         margin: 0px;
+      }
+   }
+  
+  
+     #tablebottom p{
+      color: var(--colors-textSubtle);
+      font-size: small;
+  
+     }
+  

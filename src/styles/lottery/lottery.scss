@@ -1,0 +1,859 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap');
+@import '/src/styles/lottery/history.scss';
+@import '/src/styles/lottery/BuyTickets.scss';
+
+
+:root {
+  --colors-dark-primary: #1fc7d4;
+  --colors-light-white: #fff;
+  --colors-light-failure: #ed4b9e;
+  --colors-light-failure33: #ed4b9e33;
+  --colors-light-primary: #1fc7d4;
+  --colors-light-primary0f: #1fc7d40f;
+  --colors-light-primary3D: #1fc7d43d;
+  --colors-light-primaryBright: #53dee9;
+  --colors-light-primaryDark: #0098a1;
+  --colors-light-success: #31d0aa;
+  --colors-light-success19: #31d0aa19;
+  --colors-light-warning: #ffb237;
+  --colors-light-warning2D: #ed4b9e2d;
+  --colors-light-warning33: #ed4b9e33;
+  --colors-light-binance: #f0b90b;
+  --colors-light-overlay: #452a7a;
+  --colors-light-gold: #ffc700;
+  --colors-light-silver: #b2b2b2;
+  --colors-light-bronze: #e7974d;
+  --colors-light-secondary: #7645d9;
+  --colors-light-secondary80: #7645d980;
+  --colors-light-background: #faf9fa;
+  --colors-light-backgroundDisabled: #e9eaeb;
+  --colors-light-backgroundAlt: #fff;
+  --colors-light-backgroundAlt2: hsla(0,0%,100%,.7);
+  --colors-light-cardBorder: #e7e3eb;
+  --colors-light-contrast: #191326;
+  --colors-light-dropdown: #f6f6f6;
+  --colors-light-dropdownDeep: #eee;
+  --colors-light-invertedContrast: #fff;
+  --colors-light-input: #eeeaf4;
+  --colors-light-inputSecondary: #d7caec;
+  --colors-light-tertiary: #eff4f5;
+  --colors-light-text: #280d5f;
+  --colors-light-text99: #280d5f99;
+  --colors-light-textDisabled: #bdc2c4;
+  --colors-light-textSubtle: #b8add2;
+  --colors-light-disabled: #e9eaeb;
+  --colors-light-gradientBubblegum: linear-gradient(139.73deg,#e5fdff,#f3efff);
+  --colors-light-gradientInverseBubblegum: linear-gradient(139.73deg,#f3efff,#e5fdff);
+  --colors-light-gradientCardHeader: linear-gradient(111.68deg,#f2ecf2,#e8f2f6);
+  --colors-light-gradientBlue: linear-gradient(180deg,#a7e8f1,#94e1f2);
+  --colors-light-gradientViolet: linear-gradient(180deg,#e2c9fb,#cdb8fa);
+  --colors-light-gradientVioletAlt: linear-gradient(180deg,#cbd7ef,#9a9fd0);
+  --colors-light-gradientGold: linear-gradient(180deg,#ffd800,#fdab32);
+  --colors-light-gradientBold: linear-gradient(#53dee9,#7645d9);
+  --colors-part2:linear-gradient(180deg, #fff 22%, #d7caec 100%);
+  --colors-dark-white: #fff;
+  --colors-dark-failure: #ed4b9e;
+  --colors-dark-failure33: #ed4b9e33;
+  --colors-dark-primary: #1fc7d4;
+  --colors-dark-primary0f: #1fc7d40f;
+  --colors-white: #fff;
+  --colors-failure: #ed4b9e;
+  --colors-failure33: #ed4b9e33;
+  --colors-primary: #1fc7d4;
+  --colors-primary0f: #1fc7d40f;
+  --colors-primary3D: #1fc7d43d;
+  --colors-primaryBright: #53dee9;
+  --colors-primaryDark: #0098a1;
+  --colors-success: #31d0aa;
+  --colors-success19: #31d0aa19;
+  --colors-warning: #ffb237;
+  --colors-warning2D: #ed4b9e2d;
+  --colors-warning33: #ed4b9e33;
+  --colors-binance: #f0b90b;
+  --colors-overlay: #452a7a;
+  --colors-gold: #ffc700;
+  --colors-silver: #b2b2b2;
+  --colors-bronze: #e7974d;
+  --colors-secondary: #7645d9;
+  --colors-secondary80: #7645d980;
+  --colors-background: #faf9fa;
+  --colors-backgroundDisabled: #e9eaeb;
+  --colors-backgroundAlt: #fff;
+  --colors-backgroundAlt2: hsla(0,0%,100%,.7);
+  --colors-cardBorder: #e7e3eb;
+  --colors-contrast: #191326;
+  --colors-dropdown: #f6f6f6;
+  --colors-dropdownDeep: #eee;
+  --colors-invertedContrast: #fff;
+  --colors-input: #eeeaf4;
+  --colors-inputSecondary: #d7caec;
+  --colors-tertiary: #eff4f5;
+  --colors-text: #280d5f;
+  --colors-text99: #280d5f99;
+  --colors-textDisabled: #bdc2c4;
+  --colors-textSubtle: #7a6eaa;
+  --colors-disabled: #e9eaeb;
+  --colors-gradientBubblegum: linear-gradient(139.73deg,#e5fdff,#f3efff);
+  --colors-gradientInverseBubblegum: linear-gradient(139.73deg,#f3efff,#e5fdff);
+  --colors-gradientCardHeader: linear-gradient(111.68deg,#f2ecf2,#e8f2f6);
+  --colors-gradientBlue: linear-gradient(180deg,#a7e8f1,#94e1f2);
+  --colors-gradientViolet: linear-gradient(180deg,#e2c9fb,#cdb8fa);
+  --colors-gradientVioletAlt: linear-gradient(180deg,#cbd7ef,#9a9fd0);
+  --colors-gradientGold: linear-gradient(180deg,#ffd800,#fdab32);
+  --colors-gradientBold: linear-gradient(#53dee9,#7645d9);
+  --radii-small: 4px;
+  --radii-default: 16px;
+  --radii-card: 24px;
+  --radii-circle: 50%;
+  // Custom ↓
+  //Part 1
+  --home-part1-bg: linear-gradient(139.73deg,#e6fdff 0%,#f3efff 100%);
+  --home-part1-SVGLightShow: block;
+  --home-part1-SVGDarkShow: none;
+
+  //Part 6
+  --home-part6-bg: linear-gradient(180deg, #6fb6f1 0%, #eaf2f6 100%);
+  --home-part6-card-bg: rgba(255, 255, 255, 0.6)
+}
+
+.details{
+  text-decoration: none;
+  color: var(--blue);
+  font-style: bold;
+  border: 0px;
+  margin: 20px;
+  Font-weight: 600;
+  font-size: medium ;
+  background-color: var(--colors-backgroundAlt);
+  align-self: center;
+}
+.details:hover{
+opacity: 0.65;
+cursor: pointer;
+}
+
+.buttom{
+background-color: var(--blue);
+width: 145px;
+height: 45px;
+border-radius: 15px;
+border: 0px;
+border-bottom: 1px solid var(--darkgrey);
+color: var(--white);
+font-size: 15px;
+margin-top: 15px;
+}
+.buttom:hover{
+background-color: #94e1f2;
+cursor: pointer;
+}
+
+
+#div1{
+background-image: linear-gradient(rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%);
+background-size: 250%;
+background-position: center 0px;
+display: grid;
+width: 100vw;
+grid-template-columns: auto 400px auto;
+grid-template-rows: 120px 120px 100px 200px;
+padding-bottom: 30px;
+}
+
+#div1price{
+width: 350px;
+}
+
+#buyticketsbuttom{
+display: flex;
+justify-content: center;
+}
+
+#backticket{
+width: 300px;
+height: 120px;
+z-index: 1;
+grid-column-start: 2;
+grid-column-end: 3;
+grid-row-start: 4;
+grid-row-end: 5;
+position: relative;
+animation-name: ticket;
+animation-duration: 4s;
+animation-delay: 0s;
+animation-iteration-count: infinite;
+}
+@keyframes ticket{
+0%{rotate: 5deg}
+50%{rotate: -5deg}
+100%{rotate:5deg}
+}
+#buyticketsbuttom1{
+width: 240px;
+height: 50px; 
+background: linear-gradient(rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%);
+color:var(--colors-white);
+font-size: large;
+font-style: bold;
+border-radius: 17px;
+border: 0px;
+z-index: 2;
+position: absolute;
+margin: 30px;
+animation-name: ticket;
+animation-duration: 4s;
+animation-delay: 0s;
+animation-iteration-count: infinite;
+}
+#buyticketsbuttom1:hover{
+opacity: 0.5;
+cursor: pointer;
+}
+@keyframes ticket{
+0%{rotate: 5deg}
+50%{rotate: -5deg}
+100%{rotate:5deg}
+}
+
+#div1h11{
+font-size: 120%;
+color: var(--colors-white);
+text-align: center;
+margin-top: 80px;
+} 
+#div1 p{
+font-size: 400%;
+color:var(--colors-gold);
+display: flex;
+text-align: center;
+display: flex;
+justify-content: center;
+margin: 30px;
+font-weight: 700;
+}
+#div1h12{
+font-size: 120%;
+margin: 30px;
+color: var(--colors-white);
+text-align: center;
+}
+
+
+#images11{
+position: relative;
+grid-column-start: 1;
+grid-column-end: 2;
+grid-row-start: 1;
+grid-row-end: 4;
+}
+
+
+#bigstar{
+height:120px;
+width:120px;
+position: absolute;
+left: 60%;
+top: 60%;
+animation-name: bigstar;
+animation-duration: 3s;
+animation-delay: 0.25s;
+animation-iteration-count: infinite;
+}
+@keyframes bigstar{
+0% {
+ transform: translate(0px, 0px);
+}
+50% {
+ transform: translate(10px, 10px);
+}
+100% {
+ transform: translate(0px, 0px);
+}
+}
+
+#smallstar{
+height: 80px;
+width:80px;
+position: absolute;
+left: 73%;
+top: 37%;
+animation-name: smallstar;
+animation-duration: 3.5s;
+animation-delay: 0.5s;
+animation-iteration-count: infinite;
+}
+@keyframes smallstar{
+ 0% {
+ transform: translate(0px, 0px);
+}
+50% {
+ transform: translate(10px, 10px);
+}
+100% {
+ transform: translate(0px, 0px);
+}
+}
+
+#ticketl{
+height: 100px;
+width: 100px;
+position: absolute;
+left: 75%;
+top: 100%;
+animation-name: ticketl;
+animation-duration: 7s;
+animation-delay: 0s;
+animation-iteration-count: infinite;
+
+}
+@keyframes ticketl{
+ 0% {transform: translate(0px, 0px);}
+50% {transform: translate(-10px, 15px);}
+100% {transform: translate(0px, 0px);}
+}
+
+
+#images12{
+position: relative;
+grid-column-start: 3;
+grid-column-end: 4;
+grid-row-start: 1;
+grid-row-end: 4;
+}
+
+#threestars{
+height: 150px;
+width:150px;
+position: absolute;
+right: 65%;
+top: 37%;
+animation-name: threestars;
+animation-duration: 4s;
+animation-delay: 0.75s;
+animation-iteration-count: infinite;
+}
+@keyframes threestars{
+ 0% {transform: translate(0px, 0px);}
+50% {transform: translate(-10px, 10px);}
+100% {transform: translate(0px, 0px);}
+}
+#ticketr{
+height: 100px;
+width:100px;
+position: absolute;
+right: 75%;
+top: 100%;
+animation-name: ticketr;
+animation-duration: 7s;
+animation-delay: 0s;
+animation-iteration-count: infinite;
+}
+@keyframes ticketr{
+ 0% {transform: translate(0px, 0px); }
+50% {transform: translate(10px, 15px);}
+100% {transform: translate(0px, 0px);}
+}
+
+
+
+@media screen and (max-width: 573px){
+#images11, #images12{
+display: none;
+}
+#div1{
+display: flex;
+justify-content: center;
+align-content: center;
+}
+#divh11, #div1h12, #div1 p{
+align-self: center;
+}
+}
+@media screen and (max-width: 850px){
+#threestars{
+right: 2%;
+top: 24%;
+}
+#smallstart{
+left: 9%;
+top: 23%;
+}
+#bigstar{
+left: 10%;
+}
+#ticketl{
+left: 11%;
+}
+#ticketr{
+right: 11%;
+}}
+
+#div2{
+background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
+color: var(--colors-white);
+height: auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 50px;
+min-height: auto;
+padding-top: 14px;
+padding-bottom: 48px;
+}
+#div2header{
+margin-top: 70px;
+font-size:32px;
+font-weight: 600;
+}
+#div2linetime{
+display: flex;
+flex-direction: row;
+font-size: 20px;
+padding: 0px;
+}
+#div2time{
+display: flex;
+flex-direction: row;
+color: var(--colors-gold);
+}
+#div2time h2{
+ padding-right: 5px;
+}
+#center{
+background-color: var(--colors-backgroundAlt);
+border: 1px solid var(--colors-cardBorder);
+border-radius: 15px ;
+width:756px;
+margin: 30px;
+}
+#text{
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+display: flex;
+justify-content: space-between;
+height: 60px;
+align-items: center;
+padding:20px;
+color: var(--colors-light-text);
+
+}
+#text p{
+ font-size: 25px;
+ color: var(--colors-light-text);
+}
+#draw{
+ color: var(--colors-light-text);
+}
+
+#topframe{
+height: auto;
+background: var(--colors-light-gradientCardHeader);
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+}
+#centerframeel{
+color: var(--colors-white);
+height: 200px;
+display: grid;
+grid-template-columns: 200px 550px;
+grid-template-rows: 1fr 1fr;
+grid-template-areas: 
+"pricepottext theprizepot"
+"yourticketstext prizepotbutton";
+padding-left: 20px;
+border-bottom:var(--colors-cardBorder) 1px solid;
+}
+
+#pricepottext, #yourticketstext{
+  color: var(--colors-light-text);
+  font-size: 25px;
+}
+#prize{
+  color: var(--colors-secondary);
+  font-size: 40px;
+  width: 150px;
+  display: flex;
+}
+#cakeamount{
+  color: var(--colors-primary);
+  font-size: 15px;
+  color: grey;
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+}
+#theprizepot{
+  margin-top: 10px;
+  width: 200px;
+}
+#prizepotbutton{
+  width: 200px;
+  padding-bottom: 20px;
+}
+#bottomframe{
+display: flex;
+justify-content: space-evenly;
+align-content: center;
+align-items: center;
+}
+#detailsdiv2{
+  align-self: center;
+}
+#div2details{
+  padding: 15px;
+  width: 100%;
+ align-content: space-evenly;
+ display: grid;
+ grid-template-columns: 130px 130px 130px 130px;
+ grid-template-rows: 140px 140px;
+ align-items: start;
+}
+   #div2details #header{
+     grid-column-start: 1;
+     grid-column-end: 5;
+     grid-row-start: 0;
+     grid-row-end: 1;
+     color: var(--colors-text);
+     font-size: 14px;
+   }
+
+
+@media screen and (max-width: 850px){
+  #center{
+     width: 500px;
+  }
+}
+@media screen and (max-width: 576px){
+  #center{
+     width: 300px;
+  }
+  #centerframeel{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+  }
+      #pricepottext{
+         margin: 10px;
+         padding: 0px;
+      }
+      #theprizepot{
+         margin: 0px;
+         padding: 0px;
+      }
+      #prize{
+         margin: 0px;
+         padding: 0px;
+      }
+      #yourticketstext{
+         display: none;
+      }
+
+}
+
+#div3{
+background: linear-gradient(139.73deg, rgb(49, 61, 92) 0%, rgb(61, 42, 84) 100%);
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: white;
+font-size: 15px;
+height: 250px;
+}
+.div3img{
+width: 100px;
+height: 100px;
+}
+.textdiv3{
+margin: 0px;
+}
+
+
+#div41{
+min-height: auto;
+background: linear-gradient(var(--colors-backgroundDisabled), var(--colors-secondary80));
+color: var(--colors-contrast);
+}
+#div4{
+background: linear-gradient(rgb(203, 215, 239) 0%, rgb(154, 159, 208) 100%);
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+min-height: auto;
+}   
+#finishedround{
+margin-top: 40px;
+color: var(--colors-text);
+font-size: 1300;
+}
+#div4switching{
+margin:25px;
+height: auto;
+padding-bottom: 20px;
+}
+
+#div4buttons{
+background-color: var(--colors-input);
+border-radius: 16px;
+display: inline-flex;
+border: 1px solid var(--colors-inputSecondary);
+width: auto;
+}
+#div4buttons button{
+box-shadow: none;
+flex: 1 1 auto;
+}
+
+
+#div5{
+  padding-top: 35px;
+background-color: var(--colors-background);
+}
+.div5h2{
+color: var(--colors-secondary);
+text-align: center;
+}
+.div5p{
+color: var(--colors-textSubtle);
+text-align: center;
+margin: 30px;
+}
+#div5cards{
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+gap: 20px;
+margin: 40px;
+}
+
+#div5card1, #div5card2, #div5card3{
+border: 1px solid var(--colors-cardBorder);
+border-bottom: 3px solid var(--colors-cardBorder);
+background-color: var(--colors-backgroundAlt);
+border-radius: 35px;
+height: 200px;
+display: flex;
+flex-direction: column;
+}
+.div5line1{
+  color: var(--colors-text);
+  text-align: end;
+  margin-right: 25px;
+  margin-top: 10px;
+  font-size: 80%;
+}
+.div5line2{
+  color: var(--colors-secondary);
+  margin-left: 20px;
+}
+.div5line3{
+  color: var(--colors-textSubtle);
+  margin-left: 20px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+#div5text{
+margin: 70px;
+font-style: bold;
+}
+#div5text1{
+display: flex;
+gap: 50px;
+margin-top: 30px;
+margin-bottom: 30px;
+}
+.div5textheader{
+color: var(--colors-secondary);
+}
+.div5textheader2{
+color: var(--colors-text);
+}
+.div5p1, .div5p2, .div5p3{
+color: var(--colors-textSubtle);
+}
+#div5p1, #div5p3{
+margin-left: 25px;
+}
+
+#div5table{
+border: 1px solid var(--colors-backgroundDisabled);
+border-bottom: 2px solid var(--colors-backgroundDisabled);
+border-radius: 20px;
+width: 350px;
+height: 230px;
+background-color: var(--colors-backgroundAlt);
+}
+#raw1{
+display: flex;
+flex-direction: row;
+gap: 10px;
+margin-left: 80px;
+margin-top: 25px;
+margin-right: 10px;
+}
+#raw2{
+display: flex;
+flex-direction: row;
+gap: 10px;
+margin-left: 30px;
+margin-top: 25px;
+margin-right: 10px;
+}
+#raw3{
+display: flex;
+flex-direction: row;
+gap: 10px;
+margin-left: 30px;
+margin-top: 20px;
+margin-right: 10px;
+}
+.tableH2{
+   color: var(--colors-secondary);
+   font-size: 100%;
+   margin: 10px;
+}
+.div5link{
+color: var(--colors-primary);
+text-decoration: none;
+}
+.div5link:hover{
+text-decoration: underline;
+}
+
+
+#div5text2{
+display: flex;
+gap: 30px;
+justify-content: space-between;
+margin-top: 35px;
+margin-bottom: 35px;
+}
+#div5textpart2{
+width:60%;
+}
+#table2{
+border: 1px solid var(--colors-backgroundDisabled);
+border-bottom: 2px solid var(--colors-backgroundDisabled);
+border-radius: 20px;
+width:350px;
+height: 350px;
+background-color: var(--colors-backgroundAlt);
+display: flex;
+flex-direction: column;
+align-content: space-between;
+align-self: center;
+margin-bottom: 30px;
+width: 350px;
+padding: 10px;
+}
+#t2raw1{
+align-self: center;
+margin: 20px;
+}
+#t2raw2{
+display: flex;
+flex-direction: row;
+color: var(--colors-textSubtle);
+font-size: 90%;
+}
+.columnheader{
+  color: var(--colors-secondary);
+}
+#column1, #column2{
+  margin-left: 30px;
+  height: 250px;
+}
+#column1{
+  width: 180px;
+}
+   .clumn2li{
+      list-style: none;
+   }
+   .column1li{
+      display: flex;
+      gap:5px;
+   }
+          .circle{
+          width:10px;
+          height: 10px;
+          border-radius: 7px;
+          }
+             #c1{
+              background-color: var(--colors-gold);
+             }
+             #c2{
+              background-color: rgb(45, 151, 45);
+             }
+             #c3{
+              background-color: rgb(0, 86, 108);
+             }
+             #c4{
+              background-color: #1fc7d4;
+             }
+             #c5{
+              background-color: #7645d9;
+             }
+             #c6{
+              background-color: rgb(128, 48, 81);
+             }
+             #c7{
+              background-color: gray;
+             }
+        
+
+@media screen and (max-width: 905px){
+#div5cards{
+flex-direction: column;
+}
+#div5text1{
+flex-direction: column;
+margin-bottom: 30px;
+}
+#div5text{
+margin: 30px;
+}
+#div5table{
+align-self: center;
+}
+#div5text2{
+flex-direction: column;
+justify-content: center;
+}
+#div5textpart2{
+width: 90vw;
+}
+#columnheader{
+margin-left:15px;
+}
+}
+@media screen and (max-width: 1300px){
+#table2{
+width: 350px;
+}
+#column1{
+margin: 0px;
+width:200px;
+}
+.column1li{
+margin: 0px;
+width: 200px;
+}
+}
+
+
+#div5bottom{
+display: flex;
+justify-content: center;
+}
+#paintinrabbit{
+width: 250px;
+height: 180px;
+}
+#div5bottomtext{
+color: var(--colors-text);
+font-size: 90%;
+width: 300px;
+}

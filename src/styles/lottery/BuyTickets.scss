@@ -1,0 +1,116 @@
+ .buyTickets{
+    left:0px;
+    top:0px;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.5);
+   }     
+       .buyTickets2{
+        width: 320px;
+        height: 650px;
+        border-radius: 32px;
+        display: flex;
+        flex-direction: column;
+        position:fixed;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top: 30px;
+        display:block;
+        z-index:100;
+       }
+          .buyTickHeader{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: var(--colors-contrast);
+            color: var(--colors-text);
+            border-top-right-radius: 32px;
+            border-top-left-radius: 32px;
+          }
+          .buyTickHeader :first-child{
+            padding: 12px 24px;
+          }
+             .closeCross{
+              border: 0px;
+              background-color: var(--colors-gradientCardHeader);
+             }
+          .buyTickCenter{
+            background-color: var(--colors-background);
+            align-items: center;
+            border-bottom-left-radius: 32px;
+            border-bottom-right-radius: 32px;
+            padding: 15px;
+          }
+             .tickLine1 p{
+              height: 10px;
+               padding-bottom: 10px;
+             }
+             .tickLine1{
+               display: flex;
+               justify-content: space-between;
+               height: 30px;
+             }
+                  
+                 .tickLine1 :nth-child(1){
+                   color:var(--colors-secondary);
+                   margin: 5px;
+                   font-size: 20px;
+                 }
+                 .tickLine1 :nth-child(2){
+                   color: var(--colors-text);
+                   font-size: 20px;
+                   display: flex;
+                 }
+                   .smallTicket{
+                    border: 0px;
+                    background-color: var(--colors-background);
+                   }
+             .tickLine2{
+               border: var(--colors-inputSecondary) 1px solid;
+               border-radius: 15px;
+               background-color: var(--colors-input);
+               padding: 10px;
+               box-shadow: var(--shadows-inset);
+             }
+                 .innerTable{
+                   display: flex;
+                   flex-direction: column;
+                   align-items: end;
+  
+                 }
+                    .innerTable p{
+                      color: var(--colors-textSubtle);
+                    }
+             .tickLine3, .tickLine4, .tickLine5{
+              color: var(--colors-textSubtle);
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              padding: 4px;
+              font-size: 15px;
+             }
+             .tickLine4left{
+              display: flex;
+             }
+                .tickLine4left :nth-child(1){
+                  color: var(--colors-text);
+                  font-style: bold;
+                }
+            .tickLine5{
+              border-top: 0.5 solid green;
+            }
+             .buyTickCenter :nth-child(7){
+              align-self: center;
+              justify-self: center;
+             }
+             .textBelow{
+              color: var(--colors-textSubtle);
+              font-size: 14px;
+              margin: 10px;
+             }
+  
+  
