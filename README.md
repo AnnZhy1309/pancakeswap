@@ -1,4 +1,4 @@
-# Group project from develhope 
+# Project we have been working on with the group in Develhope
 
 
 ## Getting Started with Create React App
